@@ -26,7 +26,7 @@ with st.sidebar:
     area_ref = None
     if arquivo_ref is not None:
         area_ref = calcular_area_referencia(arquivo_ref.read())
-        st.success('Calibracao concluida!')
+        st.success('Calibração concluída!')
     st.divider()
     st.header('Como usar')
     st.write('1. Calibre com 1 parafuso (opcional)')
@@ -34,8 +34,8 @@ with st.sidebar:
     st.write('3. Ajuste a sensibilidade')
     st.write('4. Clique em Contar Parafusos')
     st.divider()
-    st.caption('Sistema de Visao Computacional')
-    st.caption('Contagem Automatica de Parafusos')
+    st.caption('Sistema de Visão Computacional')
+    st.caption('Contagem Automática de Parafusos')
 
 aba1, aba2 = st.tabs(['Contagem', 'Dashboard'])
 
@@ -52,7 +52,7 @@ with aba1:
                                    type='primary',
                                    use_container_width=True)
         else:
-            st.info('Nenhuma imagem carregada. Faca upload para comecar.')
+            st.info('Nenhuma imagem carregada. Faça upload para começar.')
             processar = False
 
     with col2:
@@ -97,9 +97,9 @@ with aba1:
                         st.image(resultado['img_original'],
                                   caption='Original', width=400)
                     if nivel == 'Baixa':
-                        st.warning('Confianca baixa. Ajuste a sensibilidade ou calibre o sistema.')
+                        st.warning('Confiança baixa. Ajuste a sensibilidade ou calibre o sistema.')
                     elif nivel == 'Media':
-                        st.info('Confianca media. Calibre para maior precisao.')
+                        st.info('Confianca media. Calibre para maior precisão.')
                     else:
                         st.success('Contagem realizada com alta confianca!')
                     st.session_state.historico.append({
@@ -146,7 +146,7 @@ with aba2:
                 font=dict(family='Arial'), legend_title='Confianca')
             st.plotly_chart(fig1, use_container_width=True)
         with col_g2:
-            st.markdown('#### Score de Confianca por Imagem')
+            st.markdown('#### Score de Confiança por Imagem')
             fig2 = px.line(df, x='Arquivo', y='Confianca', markers=True,
                 labels={'Confianca': 'Score (%)', 'Arquivo': 'Imagem'},
                 color_discrete_sequence=['#1a1a2e'])
