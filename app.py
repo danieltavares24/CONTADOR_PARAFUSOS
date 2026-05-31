@@ -14,10 +14,11 @@ if 'historico' not in st.session_state:
 st.image('logo.png', use_column_width=True)
 st.divider()
 
-with st.sidebar:
-    st.divider()
-    st.header('Configuracoes')
-    sensibilidade = st.slider('Sensibilidade', 0.5, 3.0, 1.0, 0.1)
+  with st.sidebar:
+      st.image('prafusos.jpg', use_column_width=True)
+      st.divider()
+      st.header('Configuracoes')
+          sensibilidade = st.slider('Sensibilidade', 0.5, 3.0, 1.0, 0.1)
     st.divider()
     st.header('Calibracao (opcional)')
     st.write('Envie uma foto com 1 parafuso para calibrar.')
