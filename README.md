@@ -3,8 +3,7 @@
 Sistema automático de contagem de parafusos para o processo de picking industrial, desenvolvido com visão computacional clássica em Python.
 
 **Autor:** Daniel Tavares de França  
-**Programa:** Residência em Inteligência Artificial  
-**Bootcamp:** Ciência de Dados e Inteligência Artificial  
+**Programa:** Residência em Inteligência Artificial   
 **Data:** Maio de 2026
 
 ---
@@ -102,4 +101,4 @@ plotly
 
 ---
 
-© 2026 Daniel Tavares de França | Residência em Inteligência Artificial
+© 2026 Daniel Tavares de França | Inteligência Artificial Industrial
